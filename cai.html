@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>猜</title>
+    <style>
+		body{
+			margin:0;
+		}	
+        img{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<img id="myimg" src="#">
+<script>
+    setInterval(get,500);
+    function get(){
+        var xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4){
+                if(xhr.status>=200 && xhr.status<300 || xhr.status==304){
+                    dothings(xhr)
+                }else{
+                    console.log("send unsuccessful:"+xhr.status);
+                }
+            }
+        };
+        xhr.open('get','fa.php',true);
+        xhr.send(null);
+    };
+    function dothings(xhr){
+        var str=xhr.responseText;
+        str=str.replace(/\s/g,"+");
+        myimg.src=str;
+    }
+</script>
+</body>
+</html>
