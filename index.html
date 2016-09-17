@@ -209,8 +209,8 @@
 </head>
 <body>
 <div id="mask">
-    <button onclick="mask.style.display='none'">我要画</button>
-    <button onclick="mask.style.display='none'">我要猜</button>
+    <button id="huaBtn" >我要画</button>
+    <button id="caiBtn" >我要猜</button>
 </div>
 <div id="outer">
     <div id="player">
@@ -257,9 +257,24 @@
     </div>
 </div>
     <script>
-        var context=document.getElementById("canvas").getContext("2d");
+		var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
         var addr;
         var myimg=document.getElementById("myimg");
+		var mask=document.getElementById("mask");
+		var cai=document.getElementById("cai");
+//=======功能选择=======
+		document.getElementById("huaBtn").onclick=function(){
+			canvas.style.display="block";
+			cai.style.display="none";
+			mask.style.display='none';
+		};
+		document.getElementById("caiBtn").onclick=function(){
+			canvas.style.display="none";
+			cai.style.display="block";
+			mask.style.display='none';
+		};
+
 //=======异步传输========
 	   function send(){
 		  addr=canvas.toDataURL();
