@@ -1,0 +1,227 @@
+body{
+    margin:0;
+    background:url("../images/bg2.jpg");
+    font-family:"microsoft yahei";
+}
+#mask{
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0,0,0,0.55);
+    z-index:999;
+}
+#mask>p{
+    width:200px;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+#mask button{
+    width:180px;
+    height:30px;
+    border-radius: 20px;
+    cursor:pointer;
+    margin:5px;
+}
+#mask button:hover{
+    background-color:#eee;
+}
+#outer{
+    width:902px;
+    height:700px;
+    margin:50px auto;
+    background:#fff;
+    border:3px solid #ddd;
+    border-radius:10px;
+}
+#player{
+    width:200px;
+    height:502px;
+    float: left;
+}
+#player #btn{
+    width:40px;
+    height:30px;
+    border-radius: 50%;
+}
+#player span{
+    color:#f00;
+}
+canvas{
+    border:1px solid green;
+    cursor:crosshair;
+}
+iframe{
+    width:504px;
+    height:504px;
+    display:none;
+    cursor:not-allowed;
+}
+#color button{
+    width:30px;
+    height:30px;
+    cursor: pointer;
+    vertical-align:bottom;
+}
+#color #colorBoard{
+    width:50px;
+    height:50px;
+    background:#000;
+}
+#r{
+    background:red;
+
+}
+#g{
+    background:green;
+}
+#b{
+    background:blue;
+}
+#customColor{
+    width:30px;
+    height:30px;
+    background: url("../images/color.jpg") 100%;
+    background-size: 100% 100%;
+    padding:0;
+    margin:0;
+    cursor: pointer;
+    border:0;
+    vertical-align:bottom;
+}
+#playground{
+    width:502px;
+    margin:0 auto;
+    position: relative;
+    float: left;
+}
+#eventFloor{
+    position: absolute;
+    border:1px solid transparent;
+    width:500px;
+    height:500px;
+    cursor:crosshair
+}
+#hbFloor{
+    position: absolute;
+    border:1px solid transparent;
+    width:500px;
+    height:500px;
+    cursor:crosshair
+}
+#yqFloor{
+    position: absolute;
+    border:1px solid transparent;
+    width:500px;
+    height:500px;
+    display: none;
+    cursor:crosshair
+}
+#lineFloor{
+    position: absolute;
+    border:1px solid transparent;
+    width:500px;
+    height:500px;
+    display: none;
+    cursor:crosshair
+}
+
+#container{
+    box-sizing: border-box;
+    width:200px;
+    height:502px;
+    border:2px solid #aaa;
+    padding:5px;
+    float:left;
+
+}
+#chat_msg{
+    width:190px;
+    height:460px;
+    margin:0 auto;
+    overflow-y:auto;
+}
+#msg_send{
+    margin:0 auto;
+    position:relative;
+}
+.msg_text>p{
+    word-break: break-all;
+}
+#msg{
+    width:99px;
+    height:15px;
+}
+#container .msg_text{
+    margin-bottom: 15px;
+    font-size:15px;
+}
+#container span{
+    font-weight: bold;
+    float:left;
+    width:45px;
+}
+#bq{
+    vertical-align:bottom;
+    cursor:pointer;
+}
+#bqk li{
+    list-style:none;
+    float:left;
+    margin:0;
+    padding:0;
+}
+#bqk{
+    margin:0;
+    padding:5px;
+    border:1px solid #ddd;
+    overflow:auto;
+    height:250px;
+    width:200px;
+    position:absolute;
+    left:2px;
+    top:24px;
+    background:#fff;
+}
+#bqk li img{
+    cursor:pointer;
+}
+#color>div{
+    cursor: pointer;
+    background:#000;
+    display:inline-block;
+    vertical-align: top;
+    margin-top:20px;
+    position:relative;
+}
+#lw1{
+    height:14px;
+    width:14px;
+    border-radius:7px;
+}
+#lw2{
+    height:18px;
+    width:18px;
+    border-radius:9px;
+}
+#lw3{
+    height:26px;
+    width:26px;
+    border-radius:13px;
+}
+#color>div>div.show{
+    border:15px solid transparent;
+    border-left-width:8px;
+    border-right-width:8px;
+    border-top-color:#000;
+    height:0;
+    width:0;
+    position:absolute;
+    top:-15px;
+}
+#color>div>div.hide{
+    display:none;
+}
